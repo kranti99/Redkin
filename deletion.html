@@ -1,66 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Deletion Request - Redkin</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <a href="index.html" class="logo"><span class="heart">❤️</span> Redkin</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy</a>
-        </nav>
-    </header>
 
-    <main>
-        <h1 class="page-title">Data Deletion Request</h1>
-        
-        <!-- Crucial Notice Requested by User -->
-        <div class="in-app-notice">
-            <strong>💡 Quickest Method:</strong> You can delete your account and all associated data yourself directly within the Redkin app. Simply open the app, navigate to <strong>Profile Settings</strong>, and select <strong>"Delete Account"</strong>.
-        </div>
+<form id="deletion-form" action="mailto:mindwasher99@gmail.com" method="GET" enctype="text/plain">
+    <div class="form-group">
+        <label for="email">Account Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="account_email"
+            placeholder="The email linked to your Redkin account"
+            required
+        >
+    </div>
 
-        <p style="margin-bottom: 1.5rem;">If you no longer have access to the app or prefer that we handle your data deletion manually, please fill out the form below. This will generate an email to our support team.</p>
+    <div class="form-group">
+        <label for="reason">Reason for deletion (Optional)</label>
+        <textarea
+            id="reason"
+            name="reason"
+            rows="4"
+            placeholder="Tell us why you are leaving..."
+        ></textarea>
+    </div>
 
-        <form action="mailto:mindwasher99@gmail.com" method="GET" enctype="text/plain">
-            <input type="hidden" name="subject" value="Redkin Data Deletion Request">
-            
-            <div class="form-group">
-                <label for="email">Account Email Address</label>
-                <input type="email" id="email" name="body" placeholder="The email linked to your Redkin account" required>
-            </div>
+    <button type="submit" class="submit-btn">
+        Send Deletion Request
+    </button>
+</form>
 
-            <div class="form-group">
-                <label for="reason">Reason for deletion (Optional)</label>
-                <textarea id="reason" rows="4" placeholder="Tell us why you are leaving..."></textarea>
-            </div>
+<script>
+document.getElementById('deletion-form').addEventListener('submit', function (event) {
+    event.preventDefault();
 
-            <button type="submit" class="submit-btn" onclick="appendReason()">Send Deletion Request</button>
-        </form>
-    </main>
+    const email = document.getElementById('email').value.trim();
+    const reason = document.getElementById('reason').value.trim();
 
-    <footer>
-        <p>&copy; 2026 Redkin App. All rights reserved.</p>
-        <div style="margin-top: 1rem;">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms of Service</a> | 
-            <a href="index.html">Back to Home</a>
-        </div>
-    </footer>
+    const subject = 'Redkin Data Deletion Request';
 
-    <script>
-        // Simple script to append the reason to the email body before it opens the mail client
-        function appendReason() {
-            const emailInput = document.getElementById('email').value;
-            const reasonInput = document.getElementById('reason').value;
-            const form = document.querySelector('form');
-            
-            const fullBody = `Requesting data deletion for account: ${emailInput}\n\nReason: ${reasonInput}`;
-            form.querySelector('input[name="body"]').value = fullBody;
-        }
-    </script>
-</body>
-</html>
+    const body = [
+        'Redkin Data Deletion Request',
+        '',
+        'Account Email Address: ' + email,
+        '',
+        'Reason for deletion: ' + (reason || 'Not provided'),
+        '',
+        'Please delete my Redkin account and associated data.'
+    ].join('\n');
+
+    const mailtoURL =
+        'mailto:mindwasher99@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoURL;
+});
+</script>
