@@ -1,5 +1,31 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - Redkin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><span class="heart">❤️</span> Redkin</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy</a>
+        </nav>
+    </header>
 
-<form id="deletion-form" action="mailto:mindwasher99@gmail.com" method="GET" enctype="text/plain">
+    <main>
+        <h1 class="page-title">Data Deletion Request</h1>
+        
+        <!-- Crucial Notice Requested by User -->
+        <div class="in-app-notice">
+            <strong>💡 Quickest Method:</strong> You can delete your account and all associated data yourself directly within the Redkin app. Simply open the app, navigate to <strong>Profile Settings</strong>, and select <strong>"Delete Account"</strong>.
+        </div>
+
+        <p style="margin-bottom: 1.5rem;">If you no longer have access to the app or prefer that we handle your data deletion manually, please fill out the form below. This will generate an email to our support team.</p>
+
+       <form id="deletion-form" action="mailto:mindwasher99@gmail.com" method="GET" enctype="text/plain">
     <div class="form-group">
         <label for="email">Account Email Address</label>
         <input
@@ -26,7 +52,18 @@
     </button>
 </form>
 
-<script>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Redkin App. All rights reserved.</p>
+        <div style="margin-top: 1rem;">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="index.html">Back to Home</a>
+        </div>
+    </footer>
+
+    <script>
 document.getElementById('deletion-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -53,3 +90,5 @@ document.getElementById('deletion-form').addEventListener('submit', function (ev
     window.location.href = mailtoURL;
 });
 </script>
+</body>
+</html>
