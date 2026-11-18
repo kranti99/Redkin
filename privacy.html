@@ -17,64 +17,78 @@
 
     <main>
         <h1 class="page-title">Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> May 1, 2026</p>
-        <p>Redkin ("we," "our," or "us") operates the Redkin mobile application (the "App"). This Privacy Policy informs you of our policies regarding the collection, use, disclosure, and deletion of personal data when you use our App.</p>
+        <p><strong>Effective Date:</strong> November 18, 2026</p>
+        <p>Redkin ("we," "our," or "us") operates the Redkin mobile application (the "App"). This Privacy Policy informs you of our policies regarding the collection, storage, use, disclosure, and deletion of personal and health-related data when you use our App.</p>
         <br>
         
         <h3>1. Information We Collect</h3>
-        <p>To operate our blood donation finder service, we collect the following personal and sensitive user data:</p>
+        <p>To provide our blood donation finder, personal wellness trackers, health calculators, and community features, we may collect or process the following categories of data:</p>
         <ul>
-            <li><strong>Personal Details:</strong> Full name, phone number, and email address for account creation and user verification.</li>
-            <li><strong>Health & Sensitive Data:</strong> Blood type and donation eligibility status to connect donors with receivers.</li>
-            <li><strong>Location Data:</strong> Precise or approximate location (GPS/Network) to display nearby blood requests and locate nearby eligible donors. Location data is accessed only when you use location-based features.</li>
-            <li><strong>User Profile Data:</strong> Profile details, emergency blood request posts, and availability status.</li>
+            <li><strong>Personal & Account Details:</strong> Full name, phone number, email address, and profile photo for account creation, Google Sign-In authentication, and user verification.</li>
+            <li><strong>Blood Donation Data:</strong> Blood group, donation history, and donor eligibility/availability status to connect voluntary blood donors with recipients in need.</li>
+            <li><strong>Body Metrics & Wellness Calculators:</strong> Age, gender, height, weight, and activity level entered by you to generate wellness reports (such as BMI, BMR, TDEE, ideal weight range, and daily hydration goals).</li>
+            <li><strong>Personal Health & Habit Logs:</strong> Water intake logs, sleep schedules, step/activity counts, medication/pill reminder schedules, menstrual cycle/ovulation logs, and personal vitals logs (such as blood pressure and blood sugar entries).</li>
+            <li><strong>Location Data:</strong> Precise or approximate location (GPS/Network) to display nearby blood requests, eligible donors, hospitals, and blood banks. Location data is accessed only when you actively use location-based features and grant permission.</li>
+            <li><strong>Community & User-Generated Content:</strong> Emergency blood request posts, community feed posts, comments, and peer-to-peer messages sent within the App.</li>
         </ul>
         <br>
 
-        <h3>2. How We Use Your Data</h3>
+        <h3>2. Local Device Storage vs. Cloud Storage</h3>
+        <ul>
+            <li><strong>On-Device Storage:</strong> Sensitive personal wellness and tracking logs—including your menstrual cycle logs, daily water intake, sleep planner schedules, pill reminders, and personal vitals logs—are stored primarily locally on your device so you retain direct control over your daily health records.</li>
+            <li><strong>Cloud Storage:</strong> Account profile details, donor availability status, blood group, emergency blood requests, and community posts are stored securely on our backend servers (Firebase) to enable real-time donor matching, notifications, and community interactions.</li>
+        </ul>
+        <br>
+
+        <h3>3. How We Use Your Data</h3>
         <p>We collect and use your data strictly for the following purposes:</p>
         <ul>
-            <li>To register and authenticate your user account.</li>
-            <li>To search and display nearby donors or emergency blood requests based on blood group and proximity.</li>
-            <li>To send push notifications regarding urgent blood requests in your area.</li>
-            <li>To allow peer-to-peer communication between donors and requestors.</li>
-            <li>To maintain application security, troubleshoot issues, and prevent fraud.</li>
+            <li>To register, authenticate, and maintain your user session.</li>
+            <li>To calculate personalized wellness metrics and display your daily habit trackers and progress charts.</li>
+            <li>To search and display nearby blood donors, blood banks, hospitals, or emergency blood requests based on blood group and proximity.</li>
+            <li>To send push notifications and local reminders for urgent blood requests, hydration goals, bedtime routines, and medication schedules.</li>
+            <li>To enable peer-to-peer communication and community posts among registered users.</li>
+            <li>To maintain application security, moderate community content, troubleshoot technical issues, and prevent fraud.</li>
         </ul>
         <br>
 
-        <h3>3. Data Sharing and Visibility</h3>
-        <p><strong>Public Visibility within App:</strong> Your contact phone number, blood type, general distance/location, and donor status are displayed to registered users who create or view emergency blood requests to facilitate rapid contact.</p>
-        <p><strong>No Commercial Sharing:</strong> We do not sell, rent, or trade your personal information, contact numbers, or health data to advertisers or third-party marketing brokers.</p>
+        <h3>4. Data Sharing and Visibility</h3>
+        <p><strong>Public Visibility Within the App:</strong> If you register as a donor or submit an emergency blood request, your display name, blood type, general distance/city, donor availability status, and contact details (where permitted by your settings) are visible to registered users to facilitate rapid emergency assistance. Community posts you publish are visible to other App users.</p>
+        <p><strong>No Commercial Sharing or Health Ads:</strong> We do not sell, rent, or trade your personal information, contact numbers, or health/wellness data to advertisers, data brokers, or third-party marketers, nor do we use your health data for targeted advertising.</p>
         <br>
 
-        <h3>4. Third-Party Services</h3>
-        <p>The App integrates third-party services that may collect information used to identify your device or process data securely:</p>
+        <h3>5. Third-Party Services</h3>
+        <p>The App integrates trusted third-party services that process data securely in accordance with their own privacy policies:</p>
         <ul>
-            <li><strong>Google Play Services / Firebase Authentication:</strong> Account creation and secure session management.</li>
-            <li><strong>Firebase Realtime Database / Cloud Storage:</strong> Storing donor profiles and broadcast notifications.</li>
-            <li><strong>Google Maps API:</strong> Calculating distances and rendering map locations for nearby donors.</li>
+            <li><strong>Google Play Services / Firebase Authentication:</strong> Account registration, Google Sign-In, and secure session persistence.</li>
+            <li><strong>Firebase Realtime Database / Cloud Firestore / Cloud Storage:</strong> Storing donor profiles, blood requests, community posts, and push notification tokens.</li>
+            <li><strong>Map & Location Services (OpenStreetMap / MapLibre or Google Maps Services):</strong> Rendering maps and calculating approximate distances to nearby donors, blood banks, and hospitals.</li>
         </ul>
         <br>
 
-        <h3>5. User Data Security</h3>
-        <p>We prioritize your privacy and data security. All data transmitted between the App and our backend servers is encrypted in transit using standard Secure Sockets Layer (SSL/TLS) technology.</p>
+        <h3>6. Medical & Wellness Disclaimer</h3>
+        <p>Redkin is <strong>not a medical device</strong> and does not diagnose, treat, cure, or prevent any medical condition. All health reports, BMI/calorie calculations, cycle predictions, first-aid guides, and tracking charts provided in the App are for general wellness and informational purposes only. Always consult a qualified doctor or healthcare professional for medical advice, diagnosis, or treatment.</p>
         <br>
 
-        <h3>6. Account & Data Deletion Policy</h3>
-        <p>You have full control over your personal data. You can request the complete deletion of your account and associated personal data at any time through two methods:</p>
+        <h3>7. User Data Security</h3>
+        <p>We prioritize your privacy and data security. All data transmitted between the App and our backend servers is encrypted in transit using standard Secure Sockets Layer / Transport Layer Security (SSL/TLS) encryption.</p>
+        <br>
+
+        <h3>8. Account & Data Deletion Policy</h3>
+        <p>You have full control over your personal data. You can delete local tracker data directly within the App or request the complete deletion of your account and cloud-stored data at any time through two methods:</p>
         <ul>
-            <li><strong>In-App Deletion:</strong> Go to <code>Settings > Account > Delete Account</code> within the Redkin App.</li>
-            <li><strong>Web Deletion Request:</strong> If you have uninstalled the app or cannot access it, visit our dedicated <a href="deletion.html" style="color: inherit; text-decoration: underline;">Data Deletion Request Page</a> to request complete deletion of your profile, contact details, blood group data, and location records.</li>
+            <li><strong>In-App Deletion:</strong> Go to <code>Profile / Settings > Account > Delete Account</code> within the Redkin App.</li>
+            <li><strong>Web Deletion Request:</strong> If you have uninstalled the App or cannot access your account, visit our dedicated <a href="deletion.html" style="color: inherit; text-decoration: underline;">Data Deletion Request Page</a> to request complete removal of your profile, contact details, blood group records, and posts.</li>
         </ul>
-        <p>Upon receiving a valid deletion request, your account record, active blood requests, and personal identifiers will be permanently removed from our active database within 30 days.</p>
+        <p>Upon receiving a valid deletion request, your account record, active blood requests, community posts, and personal identifiers will be permanently removed from our active servers within 30 days. Uninstalling the App also removes data stored locally on your device.</p>
         <br>
 
-        <h3>7. Children's Privacy</h3>
-        <p>Redkin does not knowingly collect or solicit personal information from anyone under the age of 18. If we learn that we have collected personal data from a minor, we will delete that information immediately.</p>
+        <h3>9. Children's Privacy</h3>
+        <p>Redkin is intended for users aged 18 and older. We do not knowingly collect or solicit personal or health information from anyone under the age of 18. If we learn that we have collected personal data from a minor, we will delete that information immediately.</p>
         <br>
 
-        <h3>8. Contact Us</h3>
-        <p>If you have any questions or concerns regarding this Privacy Policy or your personal data, please contact us at:</p>
+        <h3>10. Contact Us</h3>
+        <p>If you have any questions, data deletion requests, or concerns regarding this Privacy Policy or your personal data, please contact us at:</p>
         <p><strong>Email:</strong> mindwasher99@gmail.com</p>
     </main>
 
